@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    <title>Gio matriks</title>
+</head>
+<body class="m-8">
+    <header>
+
+    </header>
+
+    <main>
+        <!-- Main card container -->
+        <section class="flex gap-8 sm:grid sm:grid-cols-1">
+            <div class="flex-1 md:grid p-6 my-4 sm:grid-cols-1 mt-5 grid-cols-2 lg:grid-cols-3">
+                <!-- Triangle card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="Images/download.png" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title text-center">Triangle</h2>
+                      <p class="text-2xl">Area = 0.5 x b x h</p>
+                      <div class="text-2xl m-2">
+                        <input id="triangle-base" class="w-20 p-1 border-2 rounded-xl" type="text" placeholder="b"> <span class="mr-3">cm</span>
+                        <input  id="triangle-height"  class="w-20 p-1 border-2 rounded-xl" type="text" placeholder="h"> <span class="mr-3">cm</span>
+                        
+                      </div>
+                      <div>
+                        <p class="text-3xl">Area : <span id="triangle-area"></span><span> cm</span><sup>2</sup></p><br>
+                      </div>
+                      <div class="card-actions">
+                        <button onclick="addTraget()" class="btn btn-primary w-full text-xl">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Rectangle card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="Images/ractangle.jpg" alt="Shoes" /></figure>
+                    <div class="card-body text-center">
+                      <h2 class="card-title justify-center text-3xl">Rectangle </h2>
+                      <p class="text-2xl">Area (A) = w x l</p>
+                      <div class="">
+                        <input class="w-20 border-2 p-2 text-xl rounded-xl" type="text" id="rectangle-width" placeholder="width">
+                        <span class="mr-4 text-2xl">cm</span>
+                        <input class="w-20 border-2 p-2 text-xl rounded-xl" type="text" id="rectangle-length" placeholder="length">
+                        <span class=" text-2xl">cm</span>
+                      </div> 
+                      <div class="">
+                        <p class="text-3xl">Area: <span id="rectangle-area">0.00</span><span> cm</span><sup>2</sup></p> <br>
+                      </div>
+                      <div class="card-actions ">
+                        <button onclick="addRectangle()" class="btn btn-primary text-2xl w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Bus Ticket -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="Images/bus.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title text-3xl justify-center">Adnan Paribahan</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div>
+                        <p class="text-center text-2xl p-5">Each ticket 500 BDT</p>
+                        <input id="quantity" class="p-3 border-2 rounded-xl text-2xl w-1/2" type="text" placeholder="Enter Ticket"> <span class="p-3 text-2xl w-1/2">X 500</span>
+                      </div>
+                      <p class="text-xl"> Total <span id="total-ammount"></span><span> Taka</span></p>
+                      <div class="card-actions justify-end">
+                        <button onclick="myBusTicket()" class="btn btn-primary w-full text-2xl">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Pentagon card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="Images/penta.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title justify-center">Pentagon</h2>
+                      <p class="text-2xl">Area (A) = 0.5 x p x a</p>
+                      <div class="">
+                        <input class="w-20 border-2 p-2 text-xl rounded-xl" type="text" id="pentagon-perameter" placeholder="perameter">
+                        <span class="mr-4 text-2xl">cm</span>
+                        <input class="w-20 border-2 p-2 text-xl rounded-xl" type="text" id="pentagon-apothom" placeholder="apothem">
+                        <span class=" text-2xl">cm</span>
+                      </div> 
+                      <div class="">
+                        <p class="text-3xl">Area: <span id="pentagon-area">0.00</span><span> cm</span><sup>2</sup></p> <br>
+
+                      <div class="card-actions justify-end">
+                        <button onclick="pentaCalculation()" class="btn btn-primary w-full text-xl">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="w-96 rounded-2xl border-2 border-gray-500 p-8">
+                <h3 class="text-3xl text-center">Area of Calculation</h3>
+            </div>
+        </section>
+    </main>
+    <script src="script/triangle.js"></script>
+    <script src="script/ticket.js"></script>
+    <script src="script/penta.js"></script>
+</body>
+</html>
